@@ -162,7 +162,7 @@ int main(int argc, char **argv)
     cv::imshow("imageThresh",imageThresh);
     cv::imshow("imageBlur",imageBlur);
     //cv::imshow("imageEdges", imageEdges);
-    //cv::imshow("imageContours", imageContours);
+    cv::imshow("imageContours", imageContours);
     cv::imshow("imageRectangles", imageRectangles);
     // cv::imshow("imageIn", imageEllipse);
     cv::waitKey();
