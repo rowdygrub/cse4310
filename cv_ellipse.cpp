@@ -83,7 +83,6 @@ int main(int argc, char **argv)
     cv::blur(imageErode, imageBlur, cv::Size(1,1));
 
 
-
     // find the image edges
     cv::Mat imageEdges;
     const double cannyThreshold1 = 100;
@@ -141,15 +140,15 @@ int main(int argc, char **argv)
     const int minEllipseInliers = 150;
     for(int i = 0; i < contours.size(); i++)
     {
-        // draw any ellipse with sufficient inliers
-        if(contours.at(i).size() > minEllipseInliers && fittedEllipses[i].size.width >= 100)
+        // draw any ellipse with sufficient inliers and size
+        if(contours.at(i).size() > minEllipseInliers && fittedEllipses[i].size.width >= 100 )
         {
             cv::Scalar color = cv::Scalar(rand.uniform(0, 256), rand.uniform(0,256), rand.uniform(0,256));
             cv::ellipse(imageIn, fittedEllipses[i], color, 2);
-            std::cout << fittedEllipses[i].size << std::endl;
-            //std::cout << fittedEllipses[i] << std::end;
-            cv::imshow("imageIn", imageIn);
-            cv::waitKey();
+            std::cout << fittedEllipses[i].center << fittedEllipses[i].size << std::endl;
+
+            //cv::imshow("imageIn", imageIn);
+            //cv::waitKey();
         }
     }
 
