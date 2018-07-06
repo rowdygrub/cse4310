@@ -1,0 +1,4 @@
+/home/ubuntu/Desktop/cv_model/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Desktop/cv_model/CMakeFiles/cv_ransac.dir
+/home/ubuntu/Desktop/cv_model/CMakeFiles/edit_cache.dir
+/home/ubuntu/Desktop/cv_model/CMakeFiles/cv_ellipse.dir
